@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  zk1:
+    build: ./zk
+    hostname: zookeeper
+    ports:
+      - "2181:2181"
