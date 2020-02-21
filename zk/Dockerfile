@@ -22,4 +22,4 @@ RUN wget http://mirrors.advancedhosters.com/apache/zookeeper/zookeeper-3.5.7/apa
  
 WORKDIR /opt/zookeeper
 EXPOSE 2181
-CMD /opt/zookeeper/bin/zkServer.sh start
+CMD ["/opt/zookeeper/bin/zkServer.sh","start"]
