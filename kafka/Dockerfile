@@ -17,7 +17,10 @@ WORKDIR /root
 RUN wget http://mirrors.gigenet.com/apache/kafka/2.4.0/kafka_2.13-2.4.0.tgz \
   && tar -xvf kafka_2.13-2.4.0.tgz \
   && mv kafka_2.13-2.4.0 /opt/kafka \
-  && rm -f kafka_2.13-2.4.0.tgz
- 
+  && rm -f kafka_2.13-2.4.0.tgz \
+  && rm -f /opt/kafka/config/server.properties
+
+ADD server.properties /opt/kafka/config/
+
 WORKDIR /opt/kafka
 EXPOSE 9092
