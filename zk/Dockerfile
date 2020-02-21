@@ -1,4 +1,3 @@
-
 FROM ubuntu:16.04
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-armhf
