@@ -2,6 +2,7 @@ version: "3.7"
 services:
   zk1:
     build: ./zk
-    hostname: zookeeper
+    hostname: zookeeper1
+    command: tail -f /dev/null
     ports:
       - "2181:2181"
