@@ -2,7 +2,7 @@
 version: "3.7"
 services:
   kafka:
-    build: ./kafka
+    build: https://github.com/6za/kafka-dockerfile.git
     command: bash -c "/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties"
     ports:
       - "9092:9092"
