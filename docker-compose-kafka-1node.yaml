@@ -1,0 +1,8 @@
+
+version: "3.7"
+services:
+  kafka:
+    build: ./kafka
+    command: bash -c "/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties"
+    ports:
+      - "9092:9092"
