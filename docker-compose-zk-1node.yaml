@@ -3,6 +3,7 @@ services:
   zk1:
     build: ./zk
     hostname: zookeeper1
+    restart: 'unless-stopped'
     command: bash -c "/opt/zookeeper/bin/zkServer.sh start && tail -f /dev/null"
     ports:
       - "2181:2181"
