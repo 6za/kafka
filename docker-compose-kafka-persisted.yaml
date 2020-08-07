@@ -4,7 +4,9 @@ services:
   kafka:
     build: https://github.com/6za/kafka-dockerfile.git
     restart: 'unless-stopped'
-    command: bash -c "/opt/kafka/bin/kafka-server-start.sh -Dkafka.logs.dir=/data/persitence /opt/kafka/config/server.properties"
+    environment:
+      - LOG_DIR=/data/persitence
+    command: bash -c "/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties"
     ports:
       - "9092:9092"
     volumes:
