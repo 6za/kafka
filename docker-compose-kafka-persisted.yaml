@@ -6,7 +6,7 @@ services:
     restart: 'unless-stopped'
     environment:
       - LOG_DIR=/data/persitence
-    command: bash -c "/opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties"
+    command: bash -c "/root/update_properties.sh && /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.live.properties"
     ports:
       - "9092:9092"
     volumes:
