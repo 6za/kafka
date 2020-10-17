@@ -4,6 +4,8 @@ services:
   kafka:
     build: https://github.com/6za/kafka-dockerfile.git
     restart: 'unless-stopped'
+    environment:
+      - SAMPLE=1
     command: bash -c "/root/update_properties.sh && /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.live.properties"
     ports:
       - "9092:9092"
